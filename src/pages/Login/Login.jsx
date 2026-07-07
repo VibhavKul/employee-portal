@@ -10,6 +10,7 @@ export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ username: '', password: '', credentials: '' });
+  const [showForgotModal, setShowForgotModal] = useState(false);
 
   if (isAuthenticated) {
     return <Navigate to="/home" replace />;
@@ -98,8 +99,39 @@ export default function Login() {
           <button type="submit" className={styles.submitBtn}>
             Login
           </button>
+
+          <button
+            type="button"
+            className={styles.forgotLink}
+            onClick={() => setShowForgotModal(true)}
+          >
+            Forgot Password?
+          </button>
         </form>
       </div>
+
+      {showForgotModal && (
+        <div
+          className={styles.modalOverlay}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="forgot-modal-msg"
+        >
+          <div className={styles.modal}>
+            <p id="forgot-modal-msg" className={styles.modalMessage}>
+              The functionality is not yet implemented...!
+            </p>
+            <button
+              type="button"
+              className={styles.modalBtn}
+              onClick={() => setShowForgotModal(false)}
+              autoFocus
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

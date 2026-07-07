@@ -93,3 +93,80 @@
   outline: 3px solid var(--color-primary);
   outline-offset: 2px;
 }
+
+/* Forgot Password link */
+.forgotLink {
+  display: block;
+  width: 100%;
+  margin-top: 0.875rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  text-align: center;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.forgotLink:hover {
+  color: var(--color-primary-hover);
+}
+
+.forgotLink:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Modal overlay */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+/* Modal box */
+.modal {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow), 0 8px 32px rgba(0, 0, 0, 0.18);
+  padding: 2rem 1.75rem 1.5rem;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+.modalMessage {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.modalBtn {
+  padding: 0.625rem 2rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.modalBtn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.modalBtn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
