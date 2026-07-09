@@ -49,7 +49,7 @@ export default function Login() {
   return (
     <div className={styles.page}>
       <div className={styles.card}>
-        <h2 className={styles.heading}>Employee Portal</h2>
+        <h2 className={styles.heading}>Abhinav Employee Portal</h2>
         <p className={styles.subheading}>Sign In</p>
 
         <form onSubmit={handleSubmit} noValidate>
